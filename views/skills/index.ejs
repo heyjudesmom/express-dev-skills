@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Dev Skills</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Skills</h1>
+    <ul>
+      <% skills.forEach(function(s) { %>
+        <li>
+          <a href="/skills/<%= s.id %>"><%= s.skill %></a>
+            - 
+          <%= s.used ? 'used' : 'not used' %>
+        </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
